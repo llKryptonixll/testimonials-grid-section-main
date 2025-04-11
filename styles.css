@@ -48,10 +48,12 @@ main{
     padding: 2em;
     border-radius: 0.7em;
     box-shadow: 10px 20px 20px rgba(190, 190, 190, 0.397);
-}
-.card, .card-text {
     display: grid;
-    gap: 1.2em;
+    gap: 1rem;
+}
+.card .card-text {
+    display: grid;
+    gap: 1rem;
 }
 .card-head {
     display: flex;
@@ -138,14 +140,17 @@ main{
     } 
 }
 @media (max-width: 820px) {
-    .card-section{
-        grid-template-columns: 100%;
+    .card-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
-    .card--kira, .card--daniel, .card--jeanette, .card--jonathan, .card--patrick{
-        grid-column: 1;
-        grid-row: auto; 
+
+    .card {
+        grid-column: auto;
+        grid-row: auto;
     }
-    .card-blockquote{
-        right: 20px;
+
+    .card-blockquote {
+        display: none;
     }
 }
